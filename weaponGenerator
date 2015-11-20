@@ -3,15 +3,18 @@ public class weaponGenerator {
 	public static int damage = 0;
 	public static String weaponMaterial = null;
 	public static String weaponType = null;
+	public static String secondaryComponent = null;
+	public static String secondaryMaterial = null;
+	public static String weaponClass = null;
 	static void getWeapon() {
+		
 		
 		// The Hobo of Power's Weapon Generator 3.0
 		
 		int weaponTypePicker = 1 + (int) (Math.random() * 27);
 		String materialType = null;
-		String secondaryComponent = null;
-		String secondaryMaterial = null;
-		String weaponClass = null;
+		
+		
 
 		//Calculating damage based on item level
 
@@ -84,16 +87,19 @@ public class weaponGenerator {
 			case 5: 
 				weaponType = "Bladed Gauntlets"; 
 				materialType = "Metal";
+				secondaryComponent = "blank";
 				weaponClass = "Dagger";
 				break;
 			case 6: 
 				weaponType = "Dirk"; 
 				materialType = "Metal";
+				secondaryComponent = "blank";
 				weaponClass = "Dagger";
 				break;
 			case 7:
 				weaponType = "Stiletto";
 				materialType = "Metal";
+				secondaryComponent = "blank";
 				weaponClass = "Dagger";
 				break;
 			case 8: 
@@ -123,6 +129,7 @@ public class weaponGenerator {
 			case 12: 
 				weaponType = "Lance"; 
 				materialType = "Metal";
+				secondaryComponent = "blank";
 				weaponClass = "Spear";
 				break;
 			case 13: 
@@ -140,21 +147,25 @@ public class weaponGenerator {
 			case 15:
 				weaponType = "Falchion";  
 				materialType = "Metal";
+				secondaryComponent = "blank";
 				weaponClass = "Sword";
 				break;
 			case 16:
 				weaponType = "Rapier";    
 				materialType = "Metal";
+				secondaryComponent = "blank";
 				weaponClass = "Sword";
 				break;
 			case 17:
 				weaponType = "Broadsword";    
 				materialType = "Metal";
+				secondaryComponent = "blank";
 				weaponClass = "Sword";
 				break;
 			case 18:
 				weaponType = "Shortsword";  
 				materialType = "Metal";
+				secondaryComponent = "blank";
 				weaponClass = "Sword";
 				break;
 			case 19: 
@@ -178,21 +189,25 @@ public class weaponGenerator {
 			case 22:
 				weaponType = "Longbow";        
 				materialType = "Wood1";
+				secondaryComponent = "blank";
 				weaponClass = "Ranged";
 				break;
 			case 23:
 				weaponType = "Recurve Bow";    
 				materialType = "Wood1";
+				secondaryComponent = "blank";
 				weaponClass = "Ranged";
 				break;
 			case 24:
 				weaponType = "Repeating Crossbow"; 
 				materialType = "Wood1";
+				secondaryComponent = "blank";
 				weaponClass = "Ranged";
 				break;
 			case 25:
 				weaponType = "Shortbow";
 				materialType = "Wood1";
+				secondaryComponent = "blank";
 				weaponClass = "Ranged";
 				break;
 			case 26: 
@@ -306,7 +321,7 @@ public class weaponGenerator {
 		}
 			// Printing item information
 			System.out.println("Weapon: " + pfenGenerator.prefixPicked + " " + weaponMaterial + " " + weaponType);
-			if (secondaryComponent != null){
+			if (secondaryComponent != "blank"){
 			System.out.println(secondaryComponent + ": " + secondaryMaterial);
 			}
 			System.out.println("Weapon Class: " + weaponClass);
@@ -324,3 +339,5 @@ public class weaponGenerator {
 			System.out.println("Enchantment: " + pfenGenerator.enchantmentPicked);
 	}	
 }
+
+
